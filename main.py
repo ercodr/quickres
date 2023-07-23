@@ -1,10 +1,13 @@
+"""QR CODE GENERATOR"""
+
 import streamlit as app
 from streamlit_option_menu import option_menu
-import controllers as cont
+from . import controllers as cont
 
 
 get_qr_status: bool = True
 download_status: bool = True
+
 qrcodeimage: str = \
     app.session_state['qrcodename'] if 'qrcodename' in app.session_state else ''
 color_setting: dict = {}
